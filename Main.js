@@ -4,6 +4,8 @@ const scene = new THREE.Scene()
 const camera = new THREE.PerspectiveCamera(75,innerWidth/innerHeight,0.1, 1000)
 scene.add(camera)
 
+camera.position.z = 5
+camera
 
  /* MESH =>{Shape & Material} */
 
@@ -18,7 +20,8 @@ scene.add(camera)
 
  const light = new THREE.DirectionalLight(0xFFFFFF,1)
  scene.add(light)
-
+light.position.y=4;
+light.position.z = 4;
 
             /*  Renderer*/
 
@@ -29,6 +32,7 @@ document.body.appendChild(renderer.domElement);
 
 
 function animate() {
+    cube.rotateY
     renderer.render(scene, camera)
 }
 
