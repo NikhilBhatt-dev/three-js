@@ -9,7 +9,7 @@ scene.add(camera)
 
  const cubeGeometry = new THREE.BoxGeometry(1,1,1)
  const cubeMaterial = new THREE.MeshStandardMaterial({
-    color: 0x00FF0
+    color: 0x00FF00
  })
 
  const cube =  new THREE.Mesh(cubeGeometry, cubeMaterial)
@@ -26,3 +26,10 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(innerWidth,innerHeight);
 
 document.body.appendChild(renderer.domElement);
+
+
+function animate() {
+    renderer.render(scene, camera)
+}
+
+renderer.setAnimationLoop(animate) // call and call
