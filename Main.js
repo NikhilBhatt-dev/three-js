@@ -32,7 +32,9 @@ document.body.appendChild(renderer.domElement);
 
 
 function animate() {
-    cube.rotateY
+    cube.rotation.y += 0.07
+    cube.rotation.z += 0.07
+    cube.rotation.x += 0.07;
     renderer.render(scene, camera)
 }
 
